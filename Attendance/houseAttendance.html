@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>House</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/25/25313.png">
+</head>
+<body id="house" class="attendance">
+  <header>
+
+    <div id="divTopHeader">
+
+        <div id="insightGroup">
+            <img src="../assets/2dc5c367a5d4e987d49ef08f438fd340-ilustracion-de-cola-de-ala-de-aguila.png" alt="aguila" id="aguilaLogo">
+            <h1>Data Insight Group</h1>
+        </div>
+
+        <div id="linkAlgo">
+            <img src="../assets/dssdss.png" alt="sobre logo" id="sobreLogo">
+            <h3><a href="https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment">info@DataInsightGroup.net</a></h3>
+        </div>
+    </div>  
+
+</header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+  
+  
+                <!-- Congreso 113 dropdown -->
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Congress 113
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="../Congress113/houseCongress113.html">House</a></li>
+                  <li><a class="dropdown-item" href="../senateAttendance.html">Senate</a></li>
+  
+                </ul>
+              </li>
+            </ul>
+  
+            <!-- Attendance dropdown -->
+            <ul class="navbar-nav">
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Attendance
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">House</a></li>
+                  <li><a class="dropdown-item" href="./senateAttendance.html">Senate</a></li>
+  
+                </ul>
+              </li>
+            </ul>
+  
+            <!-- Party Loyalty dropdown -->
+            <ul class="navbar-nav">
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Party Loyalty
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="../PartyLoyalty/housePartyLoyalty.html">House</a></li>
+                  <li><a class="dropdown-item" href="../PartyLoyalty/senatePartyLoyalty.html">Senate</a></li>
+  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <main id="app">
+
+      <div id="attendanceTopDiv">
+
+            <div id="textoHouseA">
+              <h2>Attendance</h2>
+              <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+  
+              <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+            
+            </div>
+
+        <div id="boxHouseAtGlance">
+          <h2>House at a glance</h2>
+      <table class="table" id="tablaHouseAtGlance">
+
+          <thead>
+            <tr>
+              <th scope="col">Party</th>
+              <th scope="col">No. of Reps</th>
+              <th scope="col">% Voted w/ Party</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbodyHouseAtAGlance">
+            <tr>
+              <td>Democrats</td>
+              <td>{{democrats}}</td>
+              <td>{{divisorD.toFixed(2)}} %</td>
+            </tr>
+            <tr>
+              <td>Republicans</td>
+              <td>{{republicans}}</td>
+              <td>{{divisorR.toFixed(2)}} %</td>
+            </tr>
+            <tr>
+              <td>Independets</td>
+              <td>{{independents}}</td>
+              <td>{{divisorID.toFixed(2)}} %</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>{{sumaTotal}}</td>
+              <td>{{divisionTotal.toFixed(2)}} %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
+
+    <div id="attendanceBottomDiv"> 
+
+      <div id="boxAttendanceLeastEngaged">
+        <h2>Least Engaged (Bottom 10% Attendance)</h2>
+    <table class="table" id="tablaAttendanceLeastEngaged">
+      <thead>
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">No. Missed Votes</th>
+          <th scope="col">% Missed</th>
+          
+        </tr>
+      </thead>
+      <tbody id="bodyTableAttendanceLeastEngaged">
+        <tr v-for="member in leastEngaged">
+          <td>{{member.first_name}} {{member.middle_name}} {{member.last_name}}</td>
+          <td>{{member.missed_votes}}</td>
+          <td>{{member.missed_votes_pct}} %</td>
+        </tr>
+      </tbody>
+    </table> 
+    </div>
+    
+
+
+    <div id="boxAttendanceMostEngaged">
+      <h2>Most Engaged (Top 10% Attendance)</h2>
+    <table class="table" id="tablaAttendanceMostEngaged">
+      <thead>
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">No. Missed Votes</th>
+          <th scope="col">% Missed</th>
+          
+        </tr>
+      </thead>
+
+      <tbody id="bodyTableAttendanceMostEngaged">
+        <tr v-for="member in mostEngaged">
+          <td>{{member.first_name}} {{member.middle_name}} {{member.last_name}}</td>
+          <td>{{member.missed_votes}}</td>
+          <td>{{member.missed_votes_pct}} %</td>
+        </tr>
+      </tbody>
+      
+    </table>
+  
+  
+  </div>
+
+
+</div>
+
+
+  </main>
+    <footer>© 2022 Data Insight Group | All Rights Reserved </footer>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="../scripts/main2.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

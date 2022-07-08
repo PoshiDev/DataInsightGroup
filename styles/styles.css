@@ -1,0 +1,196 @@
+/* Generales */
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body{
+    height: auto;
+}
+header{
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main{
+    padding: 1vw;
+    min-height: 70vh;
+    
+    
+}
+
+footer{
+
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    min-height: max-content;
+}
+
+nav{
+
+    display: flex;
+}
+/* Header */
+
+#linkAlgo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30vw;
+
+}
+
+/* #insightGroup{
+
+} */
+h2{
+    font-size: 3vh;
+}
+h3{
+    font-size: 4vh;
+}
+
+#aguilaLogo{
+    width: 10vw;
+}
+
+#insightGroup{
+    display: flex;
+    align-items: center;
+}
+
+#divTopHeader{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 28vw;
+    
+}
+
+/*  Main */
+/* #cuerpoMainSenate{
+
+} */
+#lupaTexto{
+    width: 18vw;
+    height: 35vh;
+}
+
+#sobreLogo{
+    width: 5vw;
+}
+
+#cuerpoMain{
+
+    padding: 1vw;
+    
+}
+
+#texto1{
+
+    padding: 1vw;
+}
+
+#texto2{
+
+    display: flex;
+    justify-content: right;
+    width: auto;
+    width: 18vw;
+    height: 35vh;
+}
+/* #textoSenate{
+
+} */
+#formulario{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* table{
+
+
+
+}
+
+#cuerpoHouse{
+
+
+}
+*/
+
+#contenedor1{
+
+    display: flex;
+    align-items: center;
+}
+
+fieldset{
+
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
+    width: 25vw;
+}
+
+/* Attendance */
+/* House */
+
+#attendanceTopDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#textoHouseA{
+    
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+#boxHouseAtGlance{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1vw;
+    padding-right: 10vw;
+}
+
+#tablaAttendanceLeastEngaged{
+
+    width: 40vw;
+    padding: 1vw;
+}
+
+#tablaAttendanceMostEngaged{
+    
+    width: 40vw;
+    padding: 1vw;
+}
+
+#attendanceBottomDiv{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+/* Party Loyalty */
+
+#textoHouseP{
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding-top: 10vh;
+
+}
